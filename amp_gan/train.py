@@ -4,11 +4,11 @@ import argparse
 import torch
 from torch import autograd
 
-sys.path.append(os.path.dirname(__file__) + "/..")
-from utils import create_folder, get_conversion_table, read_fasta
-from utils import get_encoded_seqs, generate_seqs, get_batch_simple_identity
-from utils import plot_loss, plot_identity, write_fasta
-from model import get_model_and_optimizer
+sys.path.append(os.path.dirname(__file__)+ "/..")
+from amp_gan.utils import create_folder, get_conversion_table, read_fasta
+from amp_gan.utils import get_encoded_seqs, generate_seqs, get_batch_simple_identity
+from amp_gan.utils import plot_loss, plot_identity, write_fasta
+from amp_gan.model import get_model_and_optimizer
 
 
 def calculate_gradient_penalty(discriminator, real_data, fake_data, lambda_value=None):
@@ -106,12 +106,19 @@ def main(fasta_path, output_root, batch_size=None, epoch=None, step=None):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("-f", "--fasta_path", required=True)
-    parser.add_argument("-o", "--output_root", required=True)
-    parser.add_argument("-b", "--batch_size", type=int)
-    parser.add_argument("-e", "--epoch", type=int)
-    parser.add_argument("-s", "--step", type=int)
+    parser = argparse.ArgumentParser("This program would train the GAN model with user-provided "
+                                     "sequences and save the result in thr output folder. "
+                                     "Use -h to get more help.")
+    parser.add_argument("-f","--fasta_path",required=True,
+                        help="The path of the peptide file in FASTA format")
+    parser.add_argument("-o","--output_root",required=True,
+                        help="The path of the folder where result is saved")
+    parser.add_argument("-b","--batch_size",type=int,
+                        help="The batch size of the data. The default value is 128.")
+    parser.add_argument("-e","--epoch",type=int,
+                        help="The epoch of the training process. The default value is 10000.")
+    parser.add_argument("-s","--step",type=int,
+                        help="The number of epoch to save the temporary result. The default value is 100.")
     args = vars(parser.parse_args())
     os.environ["TF_FORCE_GPU_ALLOW_GROWTH"] = "true"
     main(**args)

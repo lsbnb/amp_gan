@@ -1,2 +1,4 @@
 *.pyc
 example/.ipynb_checkpoints
+example/test
+example/test_2
