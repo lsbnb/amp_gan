@@ -1,5 +1,5 @@
 # AMP-GAN
-The GAN model to generate AMPs.
+The GAN model to generate AMPs/ AVPs and other peptides.
 
 ## Installation
 To clone the package and install dependency packages:
