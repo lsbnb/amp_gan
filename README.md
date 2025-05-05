@@ -37,17 +37,6 @@ There are two example to be used.
 2.  Script example is located in example/example.sh.
 
 ## Reference
-If you find AMP-GAN useful, please consider citing: [Discovering Novel Antimicrobial Peptides in Generative Adversarial Network](https://www.biorxiv.org/content/10.1101/2021.11.22.469634v1)  
+If you find AMP-GAN useful, please consider citing: [Intelligent De Novo Design of Novel Antimicrobial Peptides against Antibiotic-Resistant Bacteria Strains, IJMS, 2023](https://www.mdpi.com/1422-0067/24/7/6788)  
 ```
-@article {Lin2021.11.22.469634,
-	author = {Lin, Tzu-Tang and Yang, Li-Yen and Wang, Ching-Tien and Lai, Ga-Wen and Ko, Chi-Fong and Shih, Yang-Hsin and Chen, Shu-Hwa and Lin, Chung-Yen},
-	title = {Discovering Novel Antimicrobial Peptides in Generative Adversarial Network},
-	elocation-id = {2021.11.22.469634},
-	year = {2021},
-	doi = {10.1101/2021.11.22.469634},
-	publisher = {Cold Spring Harbor Laboratory},
-	URL = {https://www.biorxiv.org/content/early/2021/11/23/2021.11.22.469634},
-	eprint = {https://www.biorxiv.org/content/early/2021/11/23/2021.11.22.469634.full.pdf},
-	journal = {bioRxiv}
-}
-```
+
