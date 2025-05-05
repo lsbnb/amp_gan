@@ -32,7 +32,7 @@ python3 amp_gan/train.py -h
 ```
 
 ## Examples
-There are two example to be used.
+There are two examples with available AMPs to be used.
 1.  Jupyter-notebook example is located in example/example.ipynb.
 2.  Script example is located in example/example.sh.
 
