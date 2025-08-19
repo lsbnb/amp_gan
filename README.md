@@ -38,5 +38,5 @@ There are two examples with available AMPs (example/*.fasta) to be used.
 
 ## Reference
 If you find AMP-GAN useful, please consider citing: [Intelligent De Novo Design of Novel Antimicrobial Peptides against Antibiotic-Resistant Bacteria Strains, IJMS, 2023](https://www.mdpi.com/1422-0067/24/7/6788)  
-```
+
 
